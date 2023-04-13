@@ -1,8 +1,12 @@
 import React from "react";
-import Form from "./components/Form";
+import UseEffect from "./components/UseEffect";
 
 const App = () => {
-  return <Form />;
+  return (
+    <div>
+      <UseEffect />
+    </div>
+  );
 };
 
 export default App;

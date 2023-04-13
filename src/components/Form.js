@@ -10,7 +10,9 @@ const Form = () => {
   function handleInput(e) {
     const name = e.target.name;
     const val = e.target.value;
-    console.log(name, val);
+    setCurrent((prev) => {
+      return { ...prev, [name]: val         };
+    });
   }
   return (
     <>
