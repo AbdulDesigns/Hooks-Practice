@@ -13,7 +13,9 @@ const UseEffect = () => {
 
   useEffect(() => {
     window.addEventListener("resize", widthUpdater);
-    return window.removeEventListener("resize", widthUpdater);
+    return () => {
+      window.removeEventListener("resize", widthUpdater);
+    };
   });
   return <div>{width}</div>;
 };
